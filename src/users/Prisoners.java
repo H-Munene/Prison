@@ -13,7 +13,7 @@ public class Prisoners {
    public Prisoners(int prisoner_id){
    this.prisoner_id = prisoner_id;
 }
-   //settors
+   //setters
    public void setPrisonerName( String prisoner_name){
        this.prisoner_name = prisoner_name;
    }
@@ -28,7 +28,7 @@ public class Prisoners {
         return prisoner_id;
     }
    
-   //gettors
+   //getters
    public String getOffence(){
        return this.offence;
    }
