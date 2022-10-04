@@ -10,23 +10,22 @@ public class Test {
     public static void PickUser() {
         Scanner src = new Scanner(System.in);
         String user = src.nextLine();
-        if(user.equals("Guard") || user.equals("guard")){
-            IfGuard();
+        switch(user) {
+            case "1": 
+                IfGuard();
+                break;
+            case "2":
+                IfPrisoner();
+                break;
+            case "3":
+                IfWarden();
+                break;
+            default:
+                System.out.println("Invalid user input. Try again.");
+                System.out.println("Enter user \n 1. prisoner \n 2. guard \n 3. warden" );
+                PickUser();
         }
-        //Prisoner
-        else if( user.equals("prisoner") || user.equals("Prisoner")){
-            IfPrisoner();
-            
-        //Warden
-        }else if(user.equals("Warden") || user.equals("warden")){
-            IfWarden();
-
-        //Invalid input
-        }else {
-            System.out.println("Invalid user input. Try again.");
-            System.out.println("Enter user[prisoner, guard or warden]: " );
-            PickUser();
-        }
+        
     }
     
     public static void IfGuard() {
@@ -149,8 +148,8 @@ public class Test {
     
     public static void main(String[] args) {
         
-        System.out.println("Enter user[prisoner , guard or warden]: " );
-        
+        System.out.println("Enter user \n 1. prisoner \n 2. guard \n 3. warden" );
+       
         PickUser();
      
     }
