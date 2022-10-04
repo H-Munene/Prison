@@ -86,6 +86,7 @@ public class Test {
         
         p001.Introduce();
         
+       // Stroting user in a map
         Map<Integer, Object> prisonerData = new HashMap<Integer, Object>();
         
         Map<String, Object> pData = new HashMap<String, Object>();
@@ -140,11 +141,6 @@ public class Test {
         w001.attendance();
     }
     
-    public static void storeUser(String userId, Prisoners user){
-        Map<String, Prisoners> userData = new HashMap<String, Prisoners>();
-        userData.put(userId, user);
-        System.out.println();
-    }
     
     public static void main(String[] args) {
         
